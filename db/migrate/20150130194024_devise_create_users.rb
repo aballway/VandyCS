@@ -6,7 +6,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :encrypted_password, null: false, default: ""
 
       ## For forum display name
-      t.string :username
+      t.string :username,           null: false, default: ""
 
       ## Recoverable
       t.string   :reset_password_token
@@ -31,5 +31,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
 
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
+    add_index :users, :username              unique: true
   end
 end

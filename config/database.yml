@@ -56,8 +56,14 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: VandyCS_test
+  pool: 5
+  username: postgres
+  password: leonhardt
+  host: localhost
+  port: 5433
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.0'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -27,6 +28,8 @@ gem 'forem-theme-base', :github => "radar/forem-theme-base", :branch => "master"
 gem 'forem-bootstrap', :github => "radar/forem-bootstrap", :branch => "master"
 # Use with forem for pagination
 gem 'kaminari', '0.15.1'
+
+gem 'passenger'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

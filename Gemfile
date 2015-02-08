@@ -30,8 +30,6 @@ gem 'forem-bootstrap', :github => "radar/forem-bootstrap", :branch => "master"
 # Use with forem for pagination
 gem 'kaminari', '0.15.1'
 
-gem 'passenger'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

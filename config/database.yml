@@ -20,10 +20,15 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  host: localhost
+  port: 5432
+  username: postgres
+  password: leonhardt
 
 development:
   <<: *default
   database: VandyCS_development
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -79,7 +84,12 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+  port: 5432
   database: VandyCS_production
   username: VandyCS
   password: <%= ENV['VANDYCS_DATABASE_PASSWORD'] %>

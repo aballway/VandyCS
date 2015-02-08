@@ -20,10 +20,6 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  host: localhost
-  port: 5432
-  username: postgres
-  password: leonhardt
 
 development:
   <<: *default
@@ -84,6 +80,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
+  username: postgres
+  password: leonhardt
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
